@@ -1,1 +1,23 @@
-<p>prueba1 works!</p>
+<div class="min-h-screen bg-gray-900 flex flex-col items-center justify-center p-8 gap-4">
+
+  <h2 class="text-white text-2xl font-bold">Tabla de usuarios</h2>
+
+  <p-table [value]="usuarios" class="w-full max-w-4xl" stripedRows>
+    <ng-template #header>
+      <tr>
+        <th>#</th><th>Nombre</th><th>Email</th><th>Rol</th><th>Estado</th>
+      </tr>
+    </ng-template>
+    <ng-template #body let-u>
+      <tr>
+        <td>{{ u.id }}</td>
+        <td>{{ u.nombre }}</td>
+        <td>{{ u.email }}</td>
+        <td>{{ u.rol }}</td>
+        <td><p-tag [value]="u.activo ? 'Activo' : 'Inactivo'" [severity]="u.activo ? 'success' : 'danger'" /></td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <p-button label="Volver" severity="secondary" (onClick)="volver()" />
+</div>
