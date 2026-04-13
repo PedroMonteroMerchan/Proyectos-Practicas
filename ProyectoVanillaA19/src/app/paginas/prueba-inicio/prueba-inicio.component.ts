@@ -13,6 +13,7 @@ import { ButtonModule } from 'primeng/button';
     <div class="flex gap-4">
       <p-button label="Prueba 1" routerLink="/prueba1" />
       <p-button label="Prueba 2" routerLink="/prueba2" severity="secondary" />
+      <p-button label="Prueba 3" routerLink="/prueba3" severity="warn" />
       <p-button label="Pokemon" routerLink="/pokemon" severity="success" />
     </div>
   </div>`,
