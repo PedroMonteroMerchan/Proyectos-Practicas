@@ -1,0 +1,17 @@
+<div class="min-h-screen bg-gray-900 flex flex-col items-center justify-center gap-4 p-8">
+
+  <h2 class="text-white text-2xl font-bold">Prueba Dialog</h2>
+
+  <p-button label="Abrir Dialog" (onClick)="abrir()" />
+
+  <p-dialog header="Confirmación" [(visible)]="visible" [modal]="true" [style]="{ width: '400px' }">
+    <p class="text-gray-300">¿Estás seguro de que quieres continuar?</p>
+    <ng-template #footer>
+      <p-button label="Cancelar" severity="secondary" (onClick)="cerrar()" />
+      <p-button label="Confirmar" (onClick)="confirmar()" />
+    </ng-template>
+  </p-dialog>
+
+  <p-button label="Volver" severity="secondary" (onClick)="volver()" />
+
+</div>
